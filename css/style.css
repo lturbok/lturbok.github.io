@@ -119,9 +119,6 @@ nav a.active::after {
 
 .hero-role {
   display: block;
-  position: relative;
-  width: max-content;
-  max-width: 100%;
   white-space: nowrap;
 }
 
@@ -130,25 +127,27 @@ nav a.active::after {
 }
 
 .hero-role .slash-prefix {
-  position: absolute;
+  display: inline-block;
+  width: 0;
+  position: relative;
   left: -0.7em;
-  top: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.5em;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.12);
   letter-spacing: 0;
+  vertical-align: 0;
 }
 
 .hero-role .slash-suffix {
-  position: absolute;
-  left: calc(100% + 0.15em);
-  top: 0;
+  display: inline-block;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.5em;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.12);
   letter-spacing: 0.8em;
+  margin-left: 0.15em;
+  vertical-align: 0;
 }
 
 .intro-copy {
