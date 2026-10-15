@@ -117,6 +117,9 @@ nav a.active::after {
   text-transform: none;
 }
 
+.hero-intro h1 .hero-line {
+  display: block;
+}
 .hero-intro h1 .slash-prefix {
   display: inline-block;
   width: 0;
