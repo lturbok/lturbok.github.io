@@ -111,37 +111,44 @@ nav a.active::after {
   margin: 0 0 34px;
   font-family: 'Anton', Impact, sans-serif;
   font-size: clamp(3rem, 6vw, 6rem);
-  line-height: 0.96;
-  letter-spacing: 0.04em;
+  line-height: .96;
+  letter-spacing: 0;
   font-weight: 400;
   text-transform: none;
+}
+
+.hero-role {
+  display: block;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .hero-intro h1 .hero-line {
   display: block;
 }
-.hero-intro h1 .slash-prefix {
-  display: inline-block;
-  width: 0;
-  position: relative;
-  left: -0.7em;
 
+.hero-role .slash-prefix {
+  position: absolute;
+  left: -0.7em;
+  top: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.5em;
   font-weight: 100;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.12);
   letter-spacing: 0;
-  vertical-align: 0;
 }
 
-.hero-intro h1 .slash-suffix {
+.hero-role .slash-suffix {
+  position: absolute;
+  left: calc(100% + 0.15em);
+  top: 0;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.5em;
   font-weight: 100;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.12);
   letter-spacing: 0.8em;
-  margin-left: 0.15em;
-  vertical-align: 0;
 }
 
 .intro-copy {
