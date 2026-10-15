@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Laszlo Turbok Audio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Josefin+Sans:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-hero {
+      max-width: 900px;
+      padding: 110px 0 72px;
+    }
+    .about-hero h1,
+    .about-section h2 {
+      font-family: 'Anton', Impact, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+    }
+    .about-hero h1 {
+      margin: 0 0 34px;
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: .96;
+    }
+    .about-hero h1 .slash-prefix,
+    .about-hero h1 .slash-suffix {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: .5em;
+      font-weight: 100;
+      color: rgba(255,255,255,.12);
+      vertical-align: 0;
+    }
+    .about-hero h1 .slash-prefix {
+      display: inline-block;
+      width: 0;
+      position: relative;
+      left: -.7em;
+    }
+    .about-hero h1 .slash-suffix {
+      letter-spacing: .8em;
+      margin-left: .15em;
+    }
+    .about-copy {
+      max-width: 780px;
+      font-size: clamp(1rem, 1.25vw, 1.2rem);
+      line-height: 1.65;
+      color: var(--muted);
+    }
+    .about-copy p { margin: 0 0 1.35em; }
+    .about-section {
+      border-top: 1px solid #30302f;
+      padding: 48px 0 54px;
+    }
+    .about-section h2 {
+      margin: 0 0 28px;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1;
+    }
+    .about-section p,
+    .about-section li {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .skill-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 44px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 1rem;
+    }
+    .skill-list strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #30302f;
+    }
+    .experience-item {
+      background: var(--bg);
+      padding: 28px 30px 30px 0;
+    }
+    .experience-item:nth-child(even) { padding-left: 30px; }
+    .experience-item h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .experience-item .meta {
+      margin: 0 0 12px;
+      font-size: .82rem;
+      color: #aaa9a6;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+    .education-list { display: grid; gap: 22px; }
+    .education-item h3 {
+      margin: 0 0 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .education-item p { margin: 0; }
+    .contact-block {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-end;
+    }
+    .contact-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .75rem;
+    }
+    .contact-links a { color: var(--text); }
+    @media (max-width: 720px) {
+      .about-hero { padding: 44px 0 34px; }
+      .skill-list,
+      .experience-grid { grid-template-columns: 1fr; }
+      .experience-item,
+      .experience-item:nth-child(even) { padding: 24px 0; }
+      .experience-item + .experience-item { border-top: 1px solid #30302f; }
+      .contact-block { display: block; }
+      .contact-links { margin-top: 24px; }
+    }
+  
+/* About page */
+.about-hero {
+  max-width: 900px;
+}
+
+.about-copy {
+  max-width: 760px;
+}
+
+.about-copy p {
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 1.15vw, 1.16rem);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.about-copy strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about-section {
+  max-width: 900px;
+  padding: 54px 0;
+  border-top: 1px solid #30302f;
+}
+
+.about-section h2 {
+  margin: 0 0 22px;
+  font-family: 'Anton', Impact, sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.tool-list {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.education-list p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.education-list p:last-child {
+  margin-bottom: 0;
+}
+
+.education-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.contact-links a {
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.contact-links a:hover {
+  color: var(--muted);
+}
+
+/* Contact form */
+.contact-intro {
+  max-width: 760px;
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.contact-form {
+  max-width: 760px;
+}
+
+.contact-field {
+  margin: 0 0 22px;
+}
+
+.contact-field label {
+  display: block;
+  margin: 0 0 9px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #30302f;
+  background: #111110;
+  color: var(--text);
+  padding: 14px 15px;
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 0;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: #666563;
+}
+
+.contact-field textarea {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.contact-submit {
+  border: 1px solid #30302f;
+  background: transparent;
+  color: var(--text);
+  padding: 14px 20px;
+  font: inherit;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.contact-note {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.contact-note a {
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .about-copy p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-section {
+    padding: 40px 0;
+  }
+}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Laszlo Turbok Audio — Home">
+      <img src="images/logo.png" alt="Laszlo Turbok Audio">
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="sound.html">Sound for Picture</a>
+      <a href="music.html">Music</a>
+      <a class="active" href="about.html">About</a>
+      <a href="about.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+  <section class="portfolio-hero about-hero">
+    <h1>
+      <span class="slash-prefix">/</span>About
+      <span class="slash-suffix">_</span>
+    </h1>
+
+    <div class="about-copy">
+      <p>
+        I’m Laszlo, a sound professional based in Bristol, UK. I graduated with
+        First-Class Honours from Bath Spa University with a degree in
+        <strong>Creative Music Technology (Sound for Games and Interactive Media)</strong>,
+        and I’m currently undertaking an MFA in
+        <strong>Sound Production for Film and Video Games</strong> with ThinkSpace Education and AUB.
+      </p>
+
+      <p>
+        I’ve been passionate about music from an early age, which led me to develop
+        skills in arrangement, production and audio engineering. Those same skills
+        naturally extended into my other passions: film and video games, where sound
+        can be just as important in shaping an experience and telling a story.
+      </p>
+
+      <p>
+        My work spans <strong>sound recording, sound editing, sound design, mixing, music production
+        and arrangement</strong>, with a particular interest in creating sound that
+        supports the character and intent of a project rather than simply sitting
+        alongside it. I enjoy working across both the creative and technical sides
+        of audio, from detailed editing and sound design through to mixing and implementation.
+      </p>
+
+      <p>
+        I’m particularly interested in opportunities within
+        <strong>film, television, games and post-production</strong>, and I’m always
+        looking to expand my experience and work alongside people who care about making great things.
+      </p>
+
+      <p>
+        Outside of audio, I’m a musician and guitarist, and I’ve always had a fascination
+        with the technology behind the things I use — from recording equipment and
+        synthesizers to electronics and audio systems.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Tools</h2>
+    <p class="tool-list">
+      Pro Tools · Nuendo · Logic Pro · Wwise · Unreal Engine · Unity · iZotope RX ·
+      SpectraLayers · WaveLab · Kontakt · Max · Pure Data
+    </p>
+  </section>
+
+  <section class="about-section" id="cv">
+    <h2>Education</h2>
+    <div class="education-list">
+      <p>
+        <strong>MFA Sound Production for Film and Video Games</strong><br>
+        ThinkSpace Education / AUB
+      </p>
+      <p>
+        <strong>BA (Hons) Creative Music Technology (Games &amp; Interactive Media)</strong><br>
+        Bath Spa University · First-Class Honours
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section about-contact" id="contact">
+    <h2>Get in Touch</h2>
+
+    <p class="contact-intro">
+      Have a project in mind, or interested in working together?<br>
+      Drop me a line and I'll get back to you.
+    </p>
+
+    <form class="contact-form" action="https://formspree.io/f/xyekbpkq" method="POST">
+      <div class="contact-field">
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="contact-field">
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="contact-field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="New message from laszloturbok.com">
+
+      <!-- Honeypot spam trap -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+
+      <button class="contact-submit" type="submit">Send Message →</button>
+    </form>
+
+    <p class="contact-note">
+      Prefer email? You can also reach me directly at
+      <a href="mailto:audio@laszloturbok.com">audio@laszloturbok.com</a>.
+    </p>
+
+    <div class="contact-links" style="margin-top: 28px;">
+      <a href="https://www.linkedin.com/in/laszlo-turbok/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="cv/Laszlo_Turbok_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+      <span>© <span id="year"></span> Laszlo Turbok</span>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
