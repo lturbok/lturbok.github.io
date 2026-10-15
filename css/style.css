@@ -112,7 +112,7 @@ nav a.active::after {
   font-family: 'Anton', Impact, sans-serif;
   font-size: clamp(3rem, 6vw, 6rem);
   line-height: .96;
-  letter-spacing: 0;
+  letter-spacing: 0.04em;
   font-weight: 400;
   text-transform: none;
 }
@@ -134,7 +134,7 @@ nav a.active::after {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.5em;
   font-weight: 100;
-  color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.08);
   letter-spacing: 0;
   vertical-align: 0;
 }
@@ -144,7 +144,7 @@ nav a.active::after {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.5em;
   font-weight: 100;
-  color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.08);
   letter-spacing: 0.8em;
   margin-left: 0.15em;
   vertical-align: 0;
