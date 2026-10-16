@@ -175,30 +175,28 @@ nav a.active::after {
   line-height: 0.96;
   font-weight: 400;
   text-transform: none;
+  white-space: nowrap;
+}
+
+.portfolio-hero h1 .slash-prefix,
+.portfolio-hero h1 .slash-suffix {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: .5em;
+  font-weight: 100;
+  color: rgba(255,255,255,.08);
+  vertical-align: 0;
 }
 
 .portfolio-hero h1 .slash-prefix {
-    display: inline-block;
-    width: 0;
-    position: relative;
-    left: -0.7em;
-
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.5em;
-    font-weight: 100;
-    color: rgba(255, 255, 255, 0.08);
-    letter-spacing: 0;
-    vertical-align: 0;
+  display: inline-block;
+  width: 0;
+  position: relative;
+  left: -.7em;
 }
 
 .portfolio-hero h1 .slash-suffix {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.5em;
-    font-weight: 100;
-    color: rgba(255, 255, 255, 0.08);
-    letter-spacing: 0.8em;
-    margin-left: 0.15em;
-    vertical-align: 0;
+  letter-spacing: .8em;
+  margin-left: .15em;
 }
 
 /* ========================================
@@ -608,6 +606,13 @@ nav a.active::after {
     grid-template-columns: 1fr;
     gap: 50px;
   }
+  .portfolio-hero {
+    padding: 44px 0 34px;
+  }
+
+  .portfolio-hero h1 {
+    font-size: clamp(2.6rem, 10vw, 4rem);
+  }
 }
 
 /* ========================================
@@ -678,3 +683,13 @@ nav a.active::after {
 .music-page .project-info {
   padding-top: 24px;
 }  
+
+/* Page transitions */
+body {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+body.page-transition {
+  opacity: 0;
+}
